@@ -1,0 +1,113 @@
+/*Imagen de fondo de pantalla con un cover para que quede completa la imagen*/
+body{
+    background-color: #0f1316;
+    background-image: url("images/libreria.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+*:focus{
+    outline: none;
+}
+/*Tamaño y colores del formulario con animacion*/
+.box{
+    box-sizing: border-box;
+    width: 153px;
+    height: 153px;
+    border: 2px solid #000000;
+    box-shadow: -3px -3px 7px #ffffff73,
+                3px 3px 5px rgba(94,104,121,0.288);
+    border-radius: 50%;
+    background-color: #fff9f9;
+    margin-top: 50px;
+    overflow: hidden;
+    transition: all 1s;
+}
+/*tamaño y color que lleva la imagen de perfil y animacion*/
+img{
+    box-sizing: border-box;
+    width: 149px;
+    height: 149px;
+    border-radius: 50%;
+    margin: 0;
+    border:5px solid #0b1013;
+    padding: 3px;
+    background-color: white;
+    transition: all 1s;
+}
+/*Definir color, tamaño, fuente de los campos del formulario y diseño al momento de usarlos */
+input[type="text"],
+input[type="email"]{
+    display: block;
+    box-sizing: border-box;
+    background: none;
+    color: #050607;
+    margin-bottom: 30px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #0a0c0e;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+/*Definir color, tamaño, fuente de los campos del formulario y diseño al momento de usarlos*/
+input[type="text"]{
+    margin-top: 25px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus{
+border-bottom: 2px solid #000000;
+border-bottom-right-radius: 20px;
+color:#020303;
+transition: 0.2 ease;
+}
+/*tamaño y color de los botones*/
+button{
+    border:1px solid #8b622c;
+    background-color: #86802a;
+    color:white;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 0px;
+    transition: all 0.3s;
+}
+/*cuando el boton se resalta, da una animacion*/
+button:hover{
+    transform: scale(1.1);
+}
+/*cargue del archivo para la imagen*/
+input[type="file"]{
+    display: none;
+}
+/*color de fondo del formulario, posicionamiento y animacion*/
+label{
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: #1697ec;
+    color: white;
+    border: 1px solid #3498db;
+    padding: 2px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+/*cuando el boton se resalta, da una animacion*/
+label:hover{
+    background-color: #3498db;
+    color:#205557;
+}
+/*animacion formulario*/
+.box:hover{
+    width: 360px;
+    height: 600px;
+    border-radius: 5px;
+}
+/*cuando la imagen se resalta, da una animacion*/
+.box:hover img{
+    width: 100px;
+    height: 100px;
+    margin: 20px 31%;
+}

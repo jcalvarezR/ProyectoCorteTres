@@ -1,0 +1,95 @@
+/*Se definen variables para los colores*/
+:root{
+    --color-dark: #cfb141;
+    --color-dark-x: #cfb141;
+    --color-dark-xx: #2b2513;
+    --color-light: #ffffff;
+    --color-grey: #f5f6f8;
+}
+/*Se define la letra que estara en la pagina, los tamaños y colores*/
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: var(--color-grey);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+
+/*color pagina*/
+.bg-light{
+    background-color: var(--color-light)!important;
+}
+
+/*color pagina*/
+.bg-dark{
+    background-color: var(--color-dark)!important;
+}
+
+/*el padding para el espaciado en las secciones de la pagina, la parte derecha donde esta el formulario lo deja bien ordenado*/
+.p-6{
+    padding: 4rem 7rem;
+}
+/*el padding para el espaciado en las secciones de la pagina, es el cuadro blanco que esta en la pagina*/
+.contact-box{
+    padding: 3rem;
+}
+
+/*tamaño boton*/
+.btn {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    min-width: 10rem;
+}
+
+
+/*color de los botnoes google y facebook*/
+.btn-outline-dark{
+    border: 2px solid var(--color-dark-xx);    
+}
+
+/*color del placeholder osea de la casilla*/
+.form-control{
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-xx);
+    border-radius: .2rem;
+    padding: 0.6rem 1rem;
+}
+
+.register-bg{
+    background-image: url('images/libreria2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/*pocisionamiento letra de la foto*/
+.testimonial{
+    bottom: 10px;
+}
+
+.iniciasesion:hover{
+    text-decoration:none;
+}
+
+
+/*contenido visible en moviles*/
+@media (max-width: 575.98px){
+    .p-6{
+        padding: 2rem;
+    }
+    .contact-box{
+        padding: 0;
+    }
+
+    .width-100{
+        width: 100%;
+    }
+}
+/*tamaño imagen en moviles*/
+@media (max-width: 1200px){
+    .register-bg{
+        min-height: 50vh;
+    }
+}
