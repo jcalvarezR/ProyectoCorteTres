@@ -12,14 +12,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./css/main.css">    
+    <link rel="stylesheet" href="src/css/main.css">    
 
     <title>REGISTRO</title>
   </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-3" id="menu">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/frontend/index.html">
+          <a class="navbar-brand" href="index.html">
            <span class="text-prymary fs-5 fw-bold">WANOTE WEB</span> 
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,14 +47,14 @@
 
             <div class="col">
                <div class="text-end">
-                   <img src="./img/img1.png" width="300px" alt="">
+                   <img src="src/img/img1.png" width="300px" alt="">
                </div> 
                
                <h2 class="fw-bold text-center pt-5 py-5">Bienvenido</h2>
             
                <!-- REGISTRO-->
 
-               <form action="registrologica.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
+               <form action="/includes/registrologica.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
 
                 <div class="mb-4">
                   <label for="id_usuario" class="form-label">ID</label>
@@ -87,7 +87,7 @@
                   </div>
 
                   <div class="my-3">
-                      <span>Ya tienes cuenta <a href="/frontend/login.php"> Iniciar Sesion</a></span> <br>
+                      <span>Ya tienes cuenta <a href="login.php"> Iniciar Sesion</a></span> <br>
                       
                   </div>
                   
