@@ -82,7 +82,7 @@
 
                 
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                    <button type="submit" id="entrar" class="btn btn-primary">Iniciar Sesion</button>
                 </div>
 
                 <div class="my-3">

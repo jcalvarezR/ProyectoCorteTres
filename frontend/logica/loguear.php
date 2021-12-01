@@ -2,12 +2,18 @@
 require '../../conexion.php';
 session_start();
 
+
 $email= $_POST['email'];
 $password= $_POST['password'];
+
 
 $query = "SELECT COUNT(*) as contar from usuario where correo = '$email' and contrasena = '$password'";
 $consulta = mysqli_query($conexion,$query);
 $array = mysqli_fetch_array($consulta);
+
+
+
+
 
 if($array['contar']>0){
 

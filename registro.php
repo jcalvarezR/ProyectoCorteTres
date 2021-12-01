@@ -87,7 +87,7 @@
                   </div>
 
                   <div class="my-3">
-                      <span>Ya tienes cuenta <a href="login.html"> Iniciar Sesion</a></span> <br>
+                      <span>Ya tienes cuenta <a href="/frontend/login.php"> Iniciar Sesion</a></span> <br>
                       
                   </div>
                   

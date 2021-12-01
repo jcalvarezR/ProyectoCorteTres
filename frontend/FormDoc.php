@@ -1,7 +1,12 @@
 <?php
- 
- include "../conexion.php";
- $mysqli = new mysqli("sql10.freesqldatabase.com", "sql10454351","ZRPawxLMAg","sql10454351");
+session_start();
+
+$varsesion = $_SESSION['email'];
+
+if ($varsesion == null || $varsesion = '') {
+    echo 'Inicie sesion primero';
+    die();
+}
 ?>
 
 <!doctype html>

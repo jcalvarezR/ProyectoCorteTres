@@ -1,3 +1,18 @@
+<?php
+require './logica/loguear.php';
+session_start();
+
+$varsesion = $_SESSION['email'];
+
+if ($varsesion == null || $varsesion = '') {
+    echo 'Inicie sesion primero';
+    die();
+}
+
+$consulta = "SELECT * FROM usuario WHERE correo = '$varsesion' ";
+$ejecuta = $conecta->query($consulta);
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -71,7 +86,7 @@
                     <div class="row">
                         
                             <div class="col-lg-9">
-                                <h1 class="font-weight-bold mb-0">Bienvenido/a a <b><i>Wanote</i></b></h1>
+                                <h1 class="font-weight-bold mb-0">Bienvenido/a a <b><i>Wanote</i> <?php echo $_SESSION['email'] ?>   </b></h1>
                                 <p class="lead text-muted">Podra publicar y pedir los documentos y libros que desee, disfrute de un contenido exclusivo
                                 e interesante.</p>
                             </div>

@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$varsesion = $_SESSION['email'];
+
+if ($varsesion == null || $varsesion = '') {
+    echo 'Inicie sesion primero';
+    die();
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
         <head>
