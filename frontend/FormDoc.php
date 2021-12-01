@@ -1,6 +1,6 @@
 <?php
  
- include "conexion.php";
+ include "../conexion.php";
  $mysqli = new mysqli("sql10.freesqldatabase.com", "sql10454351","ZRPawxLMAg","sql10454351");
 ?>
 

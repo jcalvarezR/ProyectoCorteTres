@@ -80,16 +80,13 @@
                     <input type="password" class="form-control" name="password">
                 </div>
 
-                <div class="mb-4 form-check">
-                    <input type="checkbox"  name="connected"   class="form-check-input">
-                    <label for="connected" class="form-check-label">Mantener Conectado</label>
-                </div>
+                
                 <div class="d-grid">
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
                 </div>
 
                 <div class="my-3">
-                    <span>No tienes cuenta? <a href="registro.html">Registro</a></span> <br>
+                    <span>No tienes cuenta? <a href="../registro.php">Registro</a></span> <br>
                     <span><a href="recuperarContraseña.html">Recuperar Contraseña</a></span>
                 </div>
             </form>

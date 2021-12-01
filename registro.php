@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-3" id="menu">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/frontend/index.html">
            <span class="text-prymary fs-5 fw-bold">WANOTE WEB</span> 
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +54,7 @@
             
                <!-- REGISTRO-->
 
-               <form action="nuevo_2.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
+               <form action="registrologica.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
 
                 <div class="mb-4">
                   <label for="id_usuario" class="form-label">ID</label>
