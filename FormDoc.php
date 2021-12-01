@@ -1,12 +1,21 @@
 <?php
+require 'includes/conexion.php';
 session_start();
 
 $varsesion = $_SESSION['email'];
 
-if ($varsesion == null || $varsesion = '') {
+ if ($varsesion == null || $varsesion == '') {
     echo 'Inicie sesion primero';
     die();
-}
+} 
+
+    
+    $sql = "SELECT * from usuario where correo = '$varsesion'";
+    $result = $conexion->query($sql);
+    
+    $row = $result->fetch_assoc();
+    
+
 ?>
 
 <!doctype html>
@@ -24,7 +33,7 @@ if ($varsesion == null || $varsesion = '') {
  <!-- Iconos plataforma -->
  <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
  <!-- se llama a la hoja de estilos -->
- <link href="styleFormDoc.css" rel="stylesheet">
+ <link href="src/css/styleFormDoc.css" rel="stylesheet">
  <!-- recaptacha de google -->
  <script src="https://www.google.com/recaptcha/api.js"></script>
 

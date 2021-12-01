@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <link rel="stylesheet" type="text/css" href="styleEditarPerfil.css">
+        <link rel="stylesheet" type="text/css" href="src/css/styleEditarPerfil.css">
         <title>Editar perfil</title>
     </head>
 
@@ -10,8 +10,8 @@
         <center>
         <!-- Formulario edicion perfil -->
             <div class="box">
-                <img src="images/perfil2.png"></img>
-                <form action="../editar.php" method="POST">
+                <img src="src/img/perfil2.png"></img>
+                <form action="includes/editar.php" method="POST">
                 <input type="text" name="id" id="id" placeholder="Id">
                 <input type="text" name="nombre" id="nombre" placeholder="Nombres">
                 <input type="text" name="apellido" id="apellido" placeholder="Apellidos">

@@ -58,7 +58,7 @@ body{
 }
 
 .register-bg{
-    background-image: url('images/libreria2.png');
+    background-image: url('../img/libreria2.png');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;

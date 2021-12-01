@@ -1,3 +1,23 @@
+
+<?php
+require 'includes/conexion.php';
+session_start();
+
+$varsesion = $_SESSION['email'];
+
+ if ($varsesion == null || $varsesion == '') {
+    echo 'Inicie sesion primero';
+    die();
+} 
+
+    
+    $sql = "SELECT * from usuario where correo = '$varsesion'";
+    $result = $conexion->query($sql);
+    
+    $row = $result->fetch_assoc();
+    
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +30,7 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="StyleDashboard.css">
+    <link rel="stylesheet" href="src/css/StyleDashboard.css">
     <title> Wanote</title>
   </head>
   <body>
@@ -21,7 +41,7 @@
 
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
-            <img src="images/wanote.png" class="sophy">
+            <img src="src/img/wanote.png" class="sophy">
                 
             </div>
             <div class="menu">
@@ -50,14 +70,14 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="images/perfil2.png" class="img-fluid rounded-circle avatar mr-2">
+                        <img src="src/img/perfil2.png" class="img-fluid rounded-circle avatar mr-2">
                         Mi perfil
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="Perfil.html">Mi Perfil</a>
-                            <a class="dropdown-item" href="FormDoc.html">Publicar Documento</a>
+                            <a class="dropdown-item" href="Perfil.php">Mi Perfil</a>
+                            <a class="dropdown-item" href="FormDoc.php">Publicar Documento</a>
                                 <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Cerrar sesión</a>
+                            <a class="dropdown-item" href="includes/salir.php">Cerrar sesión</a>
                         </div>
                     </li>
                 </ul>
