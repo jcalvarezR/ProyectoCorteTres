@@ -1,107 +1,79 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/bootstrap.min.css">
-    <script src="src/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Roboto google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Iconos plataforma -->
+    <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
+    <!-- se llama a la hoja de estilos -->
+    <link href="src/css/main.css" rel="stylesheet">
+    
 
-    <title>LOGIN</title>
+    <title>Inicia Sesion</title>
+  </head>
+  <body>
+    <section class="contact-box">
+    <!-- columnas del formulario -->
+        <div class="row no-gutters bg-dark">
+            <div class="col-xl-5 col-lg-12 register-bg">
 
-    <style>
-        body{
-            background:#ddad44;
-            background:linear-gradient(to right, #f8ff9b, #f8ff9b);
-        }
-
-        .bg{
-            background-image:url(src/img/img1.png);
-            background-position: center center;
-
-
-        } 
-    </style>
-
-</head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light p-3" id="menu">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <span class="text-prymary fs-5 fw-bold">WANOTE WEB</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                </li>
-
-            </ul>
-
-        </div>
-    </div>
-</nav>
-
-
-<div class="container">
-    <div class="row m">
-        <div class="col bg">
-
-        </div>
-
-        <div class="col">
-            <div class="text-end">
-                <img src="src/img/img1.png" width="300px" alt="">
+            <div class="position-absolute testimonial p-4">
+                <h3 class="font-weight-bold text-light">Wanote</h3>
+                <p class="lead text-light"></p>
             </div>
 
-            <h2 class="fw-bold text-center pt-5 py-5">Bienvenido</h2>
+            </div>
+            <div class="col-xl-7 col-lg-12 d-flex">
+                <div class="container align-self-center p-6">
+                    <h1 class="font-weight-bold mb-3">Inicia Sesion</h1>
+                    <div class="form-group">
+                        <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><ion-icon name="logo-google lead align-middle mr-2"></ion-icon>Google</button>
+                        <button class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><ion-icon name="logo-facebook lead align-middle mr-2"></ion-icon>Facebook</button>
+                    </div>
+                    <p class="text-muted mb-5">Ingresa la siguiente informacion para ingresar a la plataforma.</p>
 
-            <!-- LOGIN-->
+                    <form action="includes/loguear.php" method="POST">
+                            <div class="form-group mb-3">
+                                <label class="font-weight-bold">Correo electronico<span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" placeholder="Digite su correo electronico" name="email">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="font-weight-bold">Contraseña<span class="text-danger">*</span></label>
+                                <input type="password" class="form-control" placeholder="Digite una contraseña" name="password">
+                            </div>
+                            <br>
+                            
+                            
+                            
+                            
+                        <br>
+                        <button type="submit" name="entrar" class="btn btn-primary width-100">Iniciar Sesion</button>
+                        
+                        <div class="my-3">
+                            <span>No tienes cuenta? <a href="registro.php">Registro</a></span> <br>
+                            <span><a href="recuperarContraseña.php">Recuperar Contraseña</a></span>
+                        </div>
 
-            <form action="includes/loguear.php" method="POST">
 
-                <div class="mb-4">
-                    <label for="email" class="form-label">Correo Electronico</label>
-                    <input type="email" class="form-control" name="email">
-                </div>
-
-                <div class="mb-4">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
-
+                    </form>
+                    
                 
-                <div class="d-grid">
-                    <button type="submit" name="entrar" class="btn btn-primary">Iniciar Sesion</button>
                 </div>
-
-                <div class="my-3">
-                    <span>No tienes cuenta? <a href="registro.php">Registro</a></span> <br>
-                    <span><a href="recuperarContraseña.php">Recuperar Contraseña</a></span>
-                </div>
-            </form>
-
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<section id="seccion-contacto" class="border-bottom border-secundary border-2">
-    <div id="bg-contactos">
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#273036" fill-opacity="1" d="M0,288L48,250.7C96,213,192,139,288,96C384,53,480,43,576,85.3C672,128,768,224,864,272C960,320,1056,320,1152,277.3C1248,235,1344,149,1392,106.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-
-    </div>
-
-</section>
-
-
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
