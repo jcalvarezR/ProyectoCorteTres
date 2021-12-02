@@ -96,22 +96,12 @@ $varsesion = $_SESSION['email'];
                     </div>
                 </div>
             </div>
+
+            <button>
+                <a href="DashboardUsuario.php">Devolverse A Dashboard</a>
+            </button>
         </div>
 
     </body>
 </html>
 
-<?php
-include "conexion.php";
-
-$sql = "SELECT nombre, apellido, correo, id  = '$nombre',apellido ='$apellido',correo = '$correo' WHERE id_usuario = '$codigo'";
-
-$query=mysqli_query($conexion,$sql);
-
-if($query)
-{
-    header("Location: Dashboard.html");
-}
-
-
-?>

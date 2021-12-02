@@ -22,7 +22,7 @@ if ($varsesion == null || $varsesion = '') {
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="StyleDashboard.css">
+    <link rel="stylesheet" href="src/css/StyleDashboard.css">
     <title> Administrador</title>
   </head>
   <body>
@@ -33,7 +33,7 @@ if ($varsesion == null || $varsesion = '') {
 
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
-            <img src="images/wanote.png" class="sophy">
+            <img src="src/img/wanote.png" class="sophy">
                 
             </div>
             <div class="menu">
@@ -154,7 +154,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur...</p>
                   <h3>Agotado</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>
@@ -168,7 +168,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur...</p>
                     <h3>Disponible</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>
@@ -183,7 +183,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur...</p>
                     <h3>Disponible</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>
@@ -199,7 +199,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur... </p>
                     <h3>Disponible</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>
@@ -217,7 +217,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur...</p>
                   <h3>Agotado</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>
@@ -231,7 +231,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur...</p>
                     <h3>Disponible</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>
@@ -245,7 +245,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur...</p>
                     <h3>Disponible</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>
@@ -259,7 +259,7 @@ if ($varsesion == null || $varsesion = '') {
                 <div class="product_info">
                 	<p>Lorem ipsum dolor sit amet. Non numquam quod aut accusamus dolor eum numquam possimus. Sit voluptatem ipsum rem quos quas ut vero voluptatem et dicta consectetur... </p>
                     <h3>Agotado</h3>
-                    <div class="buy_now_button"><a href="Dashboard Gcopias.html">Reserva</a></div>
+                    <div class="buy_now_button"><a href="DashboardGcopias.html">Reserva</a></div>
                     
                 </div>
                 <div class="cleaner">&nbsp;</div>

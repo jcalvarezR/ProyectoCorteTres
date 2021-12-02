@@ -1,6 +1,13 @@
 <?php
-require '../conexion.php';
+require 'includes/conexion.php';
 session_start();
+
+$varsesion = $_SESSION['email'];
+
+if ($varsesion == null || $varsesion = '') {
+    echo 'Inicie sesion primero';
+    die();
+}
 $sql = "SELECT u.id_usuario, tu.nombre as tipo, u.nombre, u.apellido, u.correo, eu.nombre as estado FROM usuario as u, tipo_usuario as tu, estado_usuario as eu WHERE u.id_tipo_usuario=tu.id_tipo_usuario AND u.id_estado_usuario=eu.id_estado_usuario";
 $result = $conexion->query($sql);
 ?>
@@ -17,7 +24,7 @@ $result = $conexion->query($sql);
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="StyleDashboard.css">
+    <link rel="stylesheet" href="src/css/StyleDashboard.css">
     <title> Administrador</title>
   </head>
   <body>
@@ -28,7 +35,7 @@ $result = $conexion->query($sql);
 
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
-            <img src="images/wanote.png" class="sophy">
+            <img src="src/img/wanote.png" class="sophy">
                 
             </div>
             <div class="menu">
@@ -159,6 +166,7 @@ $result = $conexion->query($sql);
                                             <th>apellido</th>
                                             <th>correo</th>
                                             <th>id_estado_usuario</th>
+                                            <th>Cambiar Estado</th>
                                             
                                         </tr>
                                     </thead>
@@ -170,23 +178,26 @@ $result = $conexion->query($sql);
                                             <th>apellido</th>
                                             <th>correo</th>
                                             <th>id_estado_usuario</th>
+                                            <th>Cambiar Estado</th>
                                             
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                     <?php
                                         while($row = $result->fetch_assoc()){
-                                            echo "<tr>
+                                            echo "
+                                        <tr>
                                             <td>".$row['id_usuario']."</td>
                                             <td>".$row['tipo']."</td>
                                             <td>".$row['nombre']."</td>
                                             <td>".$row['apellido']."</td>
                                             <td>".$row['correo']."</td>
                                             <td>".$row['estado']."</td>
+                                            <td> <a href='#'>aca poner un list box</a> </td>
                                         </tr>";
                                         }
                                     ?>
-                                        
+                                       
                                     </tbody>
                                 </table>
                             </div>

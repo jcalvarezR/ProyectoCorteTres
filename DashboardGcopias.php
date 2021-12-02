@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$varsesion = $_SESSION['email'];
+
+if ($varsesion == null || $varsesion = '') {
+    echo 'Inicie sesion primero';
+    die();
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +22,7 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="StyleDashboard.css">
+    <link rel="stylesheet" href="src/css/StyleDashboard.css">
     <title> Administrador</title>
   </head>
   <body>
@@ -21,7 +33,7 @@
 
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
-            <img src="images/wanote.png" class="sophy">
+            <img src="src/img/wanote.png" class="sophy">
                 
             </div>
             <div class="menu">
