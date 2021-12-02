@@ -21,7 +21,7 @@ $resultado = $mysqli->query($sql);
 
 		
 
-echo "<meta http-equiv='refresh' content='0; url=Dashboard.php'>";
+echo "<meta http-equiv='refresh' content='0; url=../Dashboard.php'>";
 
 //echo "<meta http-equiv='refresh' content='0; url=nuevo.php'>";
 ?>

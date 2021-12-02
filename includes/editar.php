@@ -1,7 +1,7 @@
 <?php
 include "conexion.php";
 
-$codigo = $_POST['id'];
+$codigo = $_SESSION['id'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $correo = $_POST['correo'];
@@ -12,7 +12,7 @@ $query=mysqli_query($conexion,$sql);
 
 if($query)
 {
-    header("Location: frontend/Perfil.html");
+    header("Location: ../DashboardUsuario.php");
 }
 
 

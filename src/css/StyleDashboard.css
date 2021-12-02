@@ -165,7 +165,7 @@ a:hover{
 	margin: 0 0 20px 0;
 	font-size: 20px;
 	color: #0c0c0b;
-	background: url(images/.jpg);
+	/*background: url(img/.jpg);*/
 }
 
 #templatemo_content_right h2 {
@@ -356,7 +356,7 @@ img {
 	width: 100px;
 	padding: 4px 0 5px 0;
 	margin-bottom: 10px; 
-	background: url(images/templatemo_btn_02.jpg) no-repeat;
+	/*background: url(images/templatemo_btn_02.jpg) no-repeat;*/
 	color: #070707;
 	font-weight: bold;
 	text-decoration: none;
