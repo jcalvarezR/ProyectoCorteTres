@@ -119,7 +119,7 @@ $varsesion = $_SESSION['email'];
    <br>
    <br> <br> <br>
        <center><button type="submit" class="btn btn-primary">Publicar</button>
-       <a href='../index.html'  <button type='submit' name='volver' class='login-form-btn'>VOLVER</a></button></center>
+       <a href='DashboardUsuario.php'  <button type='submit' name='volver' class='login-form-btn'>VOLVER</a></button></center>
   </form>
 
   </div>
