@@ -15,7 +15,6 @@ $varsesion = $_SESSION['email'];
     
     $row = $result->fetch_assoc();
     
-    
 ?>
 
 <!doctype html>
