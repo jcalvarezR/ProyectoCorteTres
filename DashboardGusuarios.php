@@ -8,7 +8,7 @@ if ($varsesion == null || $varsesion = '') {
     echo 'Inicie sesion primero';
     die();
 }
-$sql = "SELECT u.id_usuario, tu.nombre as tipo, u.nombre, u.apellido, u.correo, eu.nombre as estado FROM usuario as u, tipo_usuario as tu, estado_usuario as eu WHERE u.id_tipo_usuario=tu.id_tipo_usuario AND u.id_estado_usuario=eu.id_estado_usuario";
+$sql = "SELECT u.id_usuario, u.id_tipo_usuario, tu.nombre as tipo, u.nombre, u.apellido, u.correo, eu.nombre as estado FROM usuario as u, tipo_usuario as tu, estado_usuario as eu WHERE u.id_tipo_usuario=tu.id_tipo_usuario AND u.id_estado_usuario=eu.id_estado_usuario";
 $result = $conexion->query($sql);
 ?>
 
@@ -184,7 +184,15 @@ $result = $conexion->query($sql);
                                     </tfoot>
                                     <tbody>
                                     <?php
+                                        $accion="";
+
                                         while($row = $result->fetch_assoc()){
+                                            if($row['id_tipo_usuario']==1){
+                                                $accion="<td>ADMIN</td>";
+                                            }
+                                            else{
+                                                $accion="<td> <a href='cambiarEstado.php?id=".$row['id_usuario']."'>aca poner un list box</a> </td>";
+                                            }
                                             echo "
                                         <tr>
                                             <td>".$row['id_usuario']."</td>
@@ -193,7 +201,7 @@ $result = $conexion->query($sql);
                                             <td>".$row['apellido']."</td>
                                             <td>".$row['correo']."</td>
                                             <td>".$row['estado']."</td>
-                                            <td> <a href='#'>aca poner un list box</a> </td>
+                                            ".$accion."
                                         </tr>";
                                         }
                                     ?>
