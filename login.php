@@ -13,7 +13,7 @@
     <!-- Iconos plataforma -->
     <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
     <!-- se llama a la hoja de estilos -->
-    <link href="src/css/main.css" rel="stylesheet">
+    <link href="src/css/main2.css" rel="stylesheet">
     
 
     <title>Inicia Sesion</title>

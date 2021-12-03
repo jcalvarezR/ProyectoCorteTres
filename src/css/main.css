@@ -1,95 +1,64 @@
-/*Se definen variables para los colores*/
-:root{
-    --color-dark: #15181f;
-    --color-dark-x: #2d343f;
-    --color-dark-xx: #1f232b;
-    --color-light: #ffffff;
-    --color-grey: #f5f6f8;
-}
-/*Se define la letra que estara en la pagina, los tamaños y colores*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
-    background-color: var(--color-grey);
-    /*color: var(--color-light);*/
-    letter-spacing: .05rem;
+    font-family: 'Monstserrat', sans-serif;
+    overflow-x: hidden;
+
 }
 
-/*color pagina*/
-.bg-light{
-    background-color: var(--color-light)!important;
+#menu a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
 }
 
-/*color pagina*/
-.bg-dark{
-    background-color: var(--color-dark)!important;
-}
-
-/*el padding para el espaciado en las secciones de la pagina, la parte derecha donde esta el formulario lo deja bien ordenado*/
-.p-6{
-    padding: 4rem 7rem;
-}
-/*el padding para el espaciado en las secciones de la pagina, es el cuadro blanco que esta en la pagina*/
-.contact-box{
-    padding: 3rem;
-}
-
-/*tamaño boton*/
-.btn {
-    font-weight: 400;
-    padding: 1rem 2rem;
-    border-radius: 5rem;
-    min-width: 10rem;
+#menu button {
+    font-size: 18px;
+    font-weight: bold;
+   
 }
 
 
-/*color de los botnoes google y facebook*/
-.btn-outline-dark{
-    border: 2px solid var(--color-dark-xx);    
-}
 
-/*color del placeholder osea de la casilla*/
-.form-control{
-    background-color: var(--color-dark-xx);
-    border: 2px solid var(--color-dark-xx);
-    border-radius: .2rem;
-    padding: 0.6rem 1rem;
-}
-
-.register-bg{
-    background-image: url('src/img/img2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-}
-
-/*pocisionamiento letra de la foto*/
-.testimonial{
-    bottom: 10px;
-}
-
-.iniciasesion:hover{
-    text-decoration:none;
+.carousel-inner {
+    max-height: 39rem;
 }
 
 
-/*contenido visible en moviles*/
-@media (max-width: 575.98px){
-    .p-6{
-        padding: 2rem;
-    }
-    .contact-box{
-        padding: 0;
+
+@media (max-width:768px) {
+    #intro {
+        width: 90% !important;
     }
 
-    .width-100{
-        width: 100%;
+    .servicio-fila {
+        width: 100% !important;
+        text-align: center;
+    }
+
+  
+}
+
+
+
+
+@media (max-width:576px) {
+    
+
+    .icono-wrap {
+        flex-wrap: wrap;
+        justify-content: center !important;
     }
 }
-/*tamaño imagen en moviles*/
-@media (max-width: 1200px){
-    .register-bg{
-        min-height: 50vh;
-    }
+
+
+#bg-contacto{
+    position: relative;
+    top: -130px;
+}
+
+#seccion-contacto{
+    background-color:rgb(240, 238, 238);
+    min-height: 500px;
+    position: relative;
 }
