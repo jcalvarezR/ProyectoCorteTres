@@ -42,7 +42,7 @@ if ($varsesion == null || $varsesion = '') {
                 <a href="DashboardGcopias.php" class="d-block text-light p-3"><i class="icon ion-md-filing"></i> Gestion de copias</a>
                 <a href="DashboardGdocumentos.php" class="d-block text-light p-3"><i class="icon ion-md-bookmarks"></i>  Gestion documento</a>
                 <a href="DashboardGusuarios.php" class="d-block text-light p-3"><i class="icon ion-md-contacts"></i> Gestion de usuarios</a>
-                <a href="login.php" class="d-block text-light p-3"><i class="icon ion-md-happy"></i> Cerrar sesion</a>
+                <a href="includes/salir.php" class="d-block text-light p-3"><i class="icon ion-md-happy"></i> Cerrar sesion</a>
             </div>
         </div>
 

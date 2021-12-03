@@ -1,7 +1,3 @@
-<?php
-  $mysqli = new mysqli("sql10.freesqldatabase.com", "sql10454351","ZRPawxLMAg","sql10454351");
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -54,7 +50,7 @@
             
                <!-- REGISTRO-->
 
-               <form action="/includes/registrologica.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
+               <form action="includes/registrologica.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
 
                 <div class="mb-4">
                   <label for="id_usuario" class="form-label">ID</label>
