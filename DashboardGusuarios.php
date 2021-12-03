@@ -191,7 +191,7 @@ $result = $conexion->query($sql);
                                                 $accion="<td>ADMIN</td>";
                                             }
                                             else{
-                                                $accion="<td> <a href='cambiarEstado.php?id=".$row['id_usuario']."'>aca poner un list box</a> </td>";
+                                                $accion="<td> <a href='cambiarEstado.php?id=".$row['id_usuario']."'>Estado</a> </td>";
                                             }
                                             echo "
                                         <tr>
