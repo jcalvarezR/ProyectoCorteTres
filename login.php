@@ -33,10 +33,7 @@
             <div class="col-xl-7 col-lg-12 d-flex">
                 <div class="container align-self-center p-6">
                     <h1 class="font-weight-bold mb-3">Inicia Sesion</h1>
-                    <div class="form-group">
-                        <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><ion-icon name="logo-google lead align-middle mr-2"></ion-icon>Google</button>
-                        <button class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><ion-icon name="logo-facebook lead align-middle mr-2"></ion-icon>Facebook</button>
-                    </div>
+                    
                     <p class="text-muted mb-5">Ingresa la siguiente informacion para ingresar a la plataforma.</p>
 
                     <form action="includes/loguear.php" method="POST">
