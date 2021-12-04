@@ -73,11 +73,11 @@ $varsesion = $_SESSION['email'];
                                     name="id_editorial" required>
                             </div>
 
+                         
                             <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Id_usuario<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control" placeholder="Digite su id de usuario"
-                                    name="id_usuario" required>
-                            </div>
+                            <label class="font-weight-bold">Id_usuario<span class="text-danger">*</span></label>
+                             <h6 class="text-muted"><?php echo $row['id_usuario']?></h6>
+                                    </div>
 
                             <div class="dropdown show">
                                 <label class="font-weight-bold">Tipo docuemnto<span
