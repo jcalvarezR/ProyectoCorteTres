@@ -4,11 +4,24 @@ session_start();
 
 $varsesion = $_SESSION['email'];
 
+
 if ($varsesion == null || $varsesion = '') {
     echo 'Inicie sesion primero';
     die();
 }
-$sql = "SELECT d.id_documento, e.nombre as editorial, u.id_usuario, 
+
+
+//SQL DE LA TRAIDA DE LOS DATOS DEL USUARIO
+$sql = "SELECT * from usuario where correo = '$varsesion'";
+    $result = $conexion->query($sql);
+    
+    $row = $result->fetch_assoc();
+    
+   $row['id_usuario'];
+
+
+//SQL DE TABLA DE LIBROS
+$sqlDoc = "SELECT d.id_documento, e.nombre as editorial, u.id_usuario, 
 	td.nombre as tipo, ed.nombre as estado, 
     d.nombre, d.descripcion, d.fecha_publicacion, 
     d.isbn, d.ssn, d.adicional 
@@ -19,7 +32,7 @@ FROM documento as d, editorial as e, usuario as u,
         d.id_tipo_documento=td.id_tipo_documento AND
         d.id_estado_documento=ed.id_estado_documento AND
         d.id_estado_documento!=2";
-$result = $conexion->query($sql);
+$resultDoc = $conexion->query($sqlDoc);
 ?>
 
 <!doctype html>
@@ -81,7 +94,7 @@ $result = $conexion->query($sql);
                     <div class="row">
                         
                             <div class="col-lg-9">
-                               
+                               <?php echo $_SESSION['id']; ?>
                                 <p class="lead text-muted">Podra publicar y pedir los documentos y libros que desee, disfrute de un contenido exclusivo
                                 e interesante.</p>
                             </div>
@@ -203,27 +216,27 @@ $result = $conexion->query($sql);
                                     </tfoot>
                                     <tbody>
                                     <?php
-                                    while($row = $result->fetch_assoc()){
-                                        $identificador=$row['ssn'];
+                                    while($rowDoc = $resultDoc->fetch_assoc()){
+                                        $identificador=$rowDoc['ssn'];
                                         $numero=0;
                                         if($identificador==0){
                                             $identificador="ISBN";
-                                            $numero=$row['isbn'];
+                                            $numero=$rowDoc['isbn'];
                                         }else{
                                             $identificador="SSN";
-                                            $numero=$row['ssn'];
+                                            $numero=$rowDoc['ssn'];
                                         }
                                         echo "<tr>
                                                 <td>".$identificador."</td>
                                                 <td>".$numero."</td>
-                                                <td>".$row['editorial']."</td>
+                                                <td>".$rowDoc['editorial']."</td>
                                                 <td>".$row['nombre']."</td>
-                                                <td>".$row['descripcion']."</td>
-                                                <td>".$row['id_usuario']."</td>
-                                                <td>".$row['tipo']."</td>
-                                                <td>".$row['fecha_publicacion']."</td>
-                                                <td>".$row['adicional']."</td>
-                                                <td> <a href='VerCopias.php?id=".$row['id_documento']."'>Consultar</a> </td>
+                                                <td>".$rowDoc['descripcion']."</td>
+                                                <td>".$rowDoc['id_usuario']."</td>
+                                                <td>".$rowDoc['tipo']."</td>
+                                                <td>".$rowDoc['fecha_publicacion']."</td>
+                                                <td>".$rowDoc['adicional']."</td>
+                                                <td> <a href='VerCopias.php?id=".$rowDoc['id_documento']."'>Consultar</a> </td>
                                             </tr>";
                                     }
                                     ?>

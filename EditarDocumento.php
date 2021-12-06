@@ -64,7 +64,7 @@ $varsesion = $_SESSION['email'];
 
                     <p class="text-muted mb-5">Diligenciar correctamente el documento.</p>
 
-                    <form action="#" method="#"
+                    <form action="includes/editarD.php" method="#"
                         style="border-collapse: separate; border-spacing: 10px 5px;">
 
                         <div class="form-row mb-2">

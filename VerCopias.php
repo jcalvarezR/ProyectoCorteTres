@@ -78,7 +78,6 @@ $result = $conexion->query($sql);
                     <div class="row">
                         
                             <div class="col-lg-9">
-                               
                                 <p class="lead text-muted">Podra publicar y pedir los documentos y libros que desee, disfrute de un contenido exclusivo
                                 e interesante.</p>
                             </div>

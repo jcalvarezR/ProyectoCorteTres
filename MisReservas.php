@@ -54,6 +54,7 @@ $result = $conexion->query($sql);
                 <a href="DashboardUsuario.php" class="d-block text-light p-3"><i class="icon ion-md-home mr-2 lead"></i>Inicio</a>
                 <a href="Perfil.php" class="d-block text-light p-3"><i class="icon ion-md-person mr-2 lead"></i>Perfil</a>
                 <a href="FormDoc.php" class="d-block text-light p-3"><i class="icon ion-md-bookmarks"></i>  Publicar Documento</a>
+                <a href="DocumentosUsuario.php" class="d-block text-light p-3"><i class="icon ion-md-bookmarks"></i>  Mis Documentos</a>
                 <a href="PrestamoDocumentos.php" class="d-block text-light p-3"><i class="icon ion-md-hand"></i> Pedir Copia</a>
                 <a href="MisReservas.php" class="d-block text-light p-3"><i class="icon ion-md-hand"></i> Reservas</a>
             </div>
