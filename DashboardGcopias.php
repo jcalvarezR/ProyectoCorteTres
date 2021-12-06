@@ -147,25 +147,27 @@ $result = $conexion->query($sql);
                                     <tr>
                                             <th>id_copia</th>
                                             <th>id_documento</th>
-                                            <th>nombre</th>
-                                            <th>id_estado_documento</th>
+                                            <th>id_estado_copia</th>
                                             <th>fecha_prestamo</th>
                                             <th>tipo_copia</th>
                                            
                                             
                                         </tr>
                                         <tr>
-                                       <?php     
+                                        </thead>
+                                        
+                                    <tbody>
+                                       <?php 
+                                       while($row = $result->fetch_assoc()){    
                                         echo "<tr>
                                                 <td>".$row['id_copia']."</td>
                                                 <td>".$row['id_documento']."</td>
-                                                <td>".$row['nombre']."</td>
                                                 <td>".$row['id_estado_copia']."</td>
                                                 <td>".$row['fecha_prestamo']."</td>
                                                 <td>".$row['tipo_copia']."</td>
                                                 <td> <a href='cambiarEstadoCopia.php?id=".$row['id_copia']."'>Estado</a> </td>
                                             </tr>";  
-
+                                       }
                                                 ?>
 
                                         </tr>
