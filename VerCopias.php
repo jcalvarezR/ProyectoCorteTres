@@ -33,7 +33,7 @@ $result = $conexion->query($sql);
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/StyleDashboard.css">
-    <title> Administrador</title>
+    <title> usuario</title>
 </head>
 <body>
 
@@ -41,20 +41,21 @@ $result = $conexion->query($sql);
 
     <!-- seccion barra zona izquierda-->
 
+   
     <div id="sidebar-container" class="bg-primary">
-        <div class="logo">
+            <div class="logo">
             <img src="src/img/wanote.png" class="sophy">
-
+                
+            </div>
+            <div class="menu">
+                
+                <a href="DashboardUsuario.php" class="d-block text-light p-3"><i class="icon ion-md-home mr-2 lead"></i>Inicio</a>
+                <a href="Perfil.php" class="d-block text-light p-3"><i class="icon ion-md-person mr-2 lead"></i>Perfil</a>
+                <a href="FormDoc.php" class="d-block text-light p-3"><i class="icon ion-md-bookmarks"></i>  Publicar Documento</a>
+                <a href="PrestamoDocumentos.php" class="d-block text-light p-3"><i class="icon ion-md-hand"></i> Pedir Copia</a>
+                <a href="MisReservas.php" class="d-block text-light p-3"><i class="icon ion-md-hand"></i> Reservas</a>
+            </div>
         </div>
-        <div class="menu">
-
-            <a href="DashboardAdmin.php" class="d-block text-light p-3"><i class="icon ion-md-home mr-2 lead"></i>Inicio</a>
-            <a href="DashboardGcopias.php" class="d-block text-light p-3"><i class="icon ion-md-filing"></i> Gestion de copias</a>
-            <a href="DashboardGdocumentos.php" class="d-block text-light p-3"><i class="icon ion-md-bookmarks"></i>  Gestion documento</a>
-            <a href="DashboardGusuarios.php" class="d-block text-light p-3"><i class="icon ion-md-contacts"></i> Gestion de usuarios</a>
-            <a href="includes/salir.php" class="d-block text-light p-3"><i class="icon ion-md-happy"></i> Cerrar sesion</a>
-        </div>
-    </div>
 
     <!-- seccion nabvar-->
 
@@ -75,11 +76,12 @@ $result = $conexion->query($sql);
             <section class="py-3">
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-lg-9">
-                            <h1 class="font-weight-bold mb-0">Bienvenido/a a <b><i>Wanote</i></b> Administrador</h1>
-                            <p class="lead text-muted">Gestione documentos y usuarios.</p>
-                        </div>
+                        
+                            <div class="col-lg-9">
+                               
+                                <p class="lead text-muted">Podra publicar y pedir los documentos y libros que desee, disfrute de un contenido exclusivo
+                                e interesante.</p>
+                            </div>
 
                         <!--Boton normal
                             <div class="col-lg-3 d-flex">
