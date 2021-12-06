@@ -61,11 +61,7 @@ $varsesion = $_SESSION['email'];
                         style="border-collapse: separate; border-spacing: 10px 5px;">
 
                         <div class="form-row mb-2">
-                            <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Id_documento<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control" placeholder="Digite su id documento"
-                                    name="id_documento">
-                            </div>
+                            
 
                             <div class="form-group col-md-6">
                                 <label class="font-weight-bold">Id_editorial<span class="text-danger">*</span></label>
@@ -74,10 +70,7 @@ $varsesion = $_SESSION['email'];
                             </div>
 
                          
-                            <div class="form-group col-md-6">
-                            <label class="font-weight-bold">Id_usuario<span class="text-danger">*</span></label>
-                             <h6 class="text-muted"><?php echo $row['id_usuario']?></h6>
-                                    </div>
+                            
 
                             <div class="dropdown show">
                                 <label class="font-weight-bold">Tipo docuemnto<span
@@ -123,7 +116,22 @@ $varsesion = $_SESSION['email'];
                                 <input type="text" class="form-control" placeholder="Digite informacion relevante"
                                     name="adicional">
                             </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">cantidad de copias<span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" placeholder="Digite id de la cantidad de copias"
+                                    name="numero_copias" required>
+                            </div>
                             <br>
+
+                            <div class="dropdown show">
+                                <label class="font-weight-bold">Tipo Copias<span
+                                        class="text-danger">*</span></label><br>
+                                <select name="tipo_copia">
+                                    <option class="dropdown-item" value="1">Física</option>
+                                    <option class="dropdown-item" value="2">Virtual </option>
+                                </select>
+                            </div>
+
 
                             <center>
 
