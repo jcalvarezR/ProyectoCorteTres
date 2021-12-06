@@ -3,36 +3,23 @@ require 'includes/conexion.php';
 session_start();
 
 $varsesion = $_SESSION['email'];
-
+$id = $_SESSION['id'];
 
 if ($varsesion == null || $varsesion = '') {
     echo 'Inicie sesion primero';
     die();
 }
 
-
 //SQL DE LA TRAIDA DE LOS DATOS DEL USUARIO
-$sql = "SELECT * from usuario where correo = '$varsesion'";
+$sql = "SELECT * from documento where id_usuario = '$id'";
     $result = $conexion->query($sql);
     
     $row = $result->fetch_assoc();
     
-   $row['id_usuario'];
 
 
 //SQL DE TABLA DE LIBROS
-$sqlDoc = "SELECT d.id_documento, e.nombre as editorial, u.id_usuario, 
-	td.nombre as tipo, ed.nombre as estado, 
-    d.nombre, d.descripcion, d.fecha_publicacion, 
-    d.isbn, d.ssn, d.adicional 
-FROM documento as d, editorial as e, usuario as u, 
-	tipo_documento as td, estado_documento as ed 
-    WHERE d.id_editorial=e.id_editorial AND
-    	d.id_usuario=u.id_usuario AND 
-        d.id_tipo_documento=td.id_tipo_documento AND
-        d.id_estado_documento=ed.id_estado_documento AND
-        d.id_estado_documento!=2";
-$resultDoc = $conexion->query($sqlDoc);
+
 ?>
 
 <!doctype html>
@@ -186,57 +173,42 @@ $resultDoc = $conexion->query($sqlDoc);
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th>identificador</th>
-                                        <th>número</th>
-                                        <th>editorial</th>
+                                        <th>id_editorial</th>
                                         <th>nombre</th>
-                                        <th>descripción</th>
-                                        <th>autor</th>
-                                        <th>tipo_documento</th>
-                                        <th>fecha_publicación</th>
-                                        <th>inf. adicional</th>
-                                        <th>consultar</th>
+                                        <th>descripcion</th>
+                                        <th>tipo documento</th>
+                                        <th>fecha </th>
+                                        <th>adicional</th>
+                                        
 
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>identificador</th>
-                                        <th>número</th>
-                                        <th>editorial</th>
+                                    <th>id_editorial</th>
                                         <th>nombre</th>
-                                        <th>descripción</th>
-                                        <th>autor</th>
-                                        <th>tipo_documento</th>
-                                        <th>fecha_publicación</th>
-                                        <th>inf. adicional</th>
-                                        <th>consultar</th>
+                                        <th>descripcion</th>
+                                        <th>tipo documento</th>
+                                        <th>fecha </th>
+                                        <th>adicional</th>
+                                        
 
                                     </tr>
                                     </tfoot>
                                     <tbody>
                                     <?php
-                                    while($rowDoc = $resultDoc->fetch_assoc()){
-                                        $identificador=$rowDoc['ssn'];
-                                        $numero=0;
-                                        if($identificador==0){
-                                            $identificador="ISBN";
-                                            $numero=$rowDoc['isbn'];
-                                        }else{
-                                            $identificador="SSN";
-                                            $numero=$rowDoc['ssn'];
-                                        }
+                                    while($row = $result->fetch_assoc()){
+                                      
+                                        
                                         echo "<tr>
-                                                <td>".$identificador."</td>
-                                                <td>".$numero."</td>
-                                                <td>".$rowDoc['editorial']."</td>
+                                                
+                                                <td>".$row['id_editorial']."</td>
                                                 <td>".$row['nombre']."</td>
-                                                <td>".$rowDoc['descripcion']."</td>
-                                                <td>".$rowDoc['id_usuario']."</td>
-                                                <td>".$rowDoc['tipo']."</td>
-                                                <td>".$rowDoc['fecha_publicacion']."</td>
-                                                <td>".$rowDoc['adicional']."</td>
-                                                <td> <a href='VerCopias.php?id=".$rowDoc['id_documento']."'>Consultar</a> </td>
+                                                <td>".$row['descripcion']."</td>
+                                                <td>".$row['id_tipo_documento']."</td>
+                                                <td>".$row['fecha_publicacion']."</td>
+                                                <td>".$row['adicional']."</td>
+                                               
                                             </tr>";
                                     }
                                     ?>
