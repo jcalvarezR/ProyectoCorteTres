@@ -45,7 +45,7 @@ $varsesion = $_SESSION['email'];
             </div>
             <div class="menu">
                 
-                <a href="Dashboard.php" class="d-block text-light p-3"><i class="icon ion-md-home mr-2 lead"></i>Inicio</a>
+                <a href="DashboardUsuario.php" class="d-block text-light p-3"><i class="icon ion-md-home mr-2 lead"></i>Inicio</a>
                 <a href="Perfil.php" class="d-block text-light p-3"><i class="icon ion-md-person mr-2 lead"></i>Perfil</a>
                 <a href="FormDoc.php" class="d-block text-light p-3"><i class="icon ion-md-bookmarks"></i>  Publicar Documento</a>
                 <a href="DashboardPcopia.php" class="d-block text-light p-3"><i class="icon ion-md-hand"></i> Pedir Copia</a>
