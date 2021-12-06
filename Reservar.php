@@ -22,7 +22,7 @@ if($estado==1){
 
     $idUsuario = $_SESSION['id'];
 
-    $fecha=date('d-m-y h:i:s');
+    $fecha=date('y-m-d h:i:s');
 
 
     $sql = "INSERT INTO reserva(id_copia,id_usuario,fecha_reserva)
