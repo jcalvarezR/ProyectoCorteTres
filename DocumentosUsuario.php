@@ -173,26 +173,24 @@ $sql = "SELECT * from documento where id_usuario = '$id'";
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th>id_editorial</th>
+                                        <th>id documento</th>
+                                        <th>id editorial</th>
                                         <th>nombre</th>
                                         <th>descripcion</th>
                                         <th>tipo documento</th>
                                         <th>fecha </th>
                                         <th>adicional</th>
-                                        
-
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                    <th>id_editorial</th>
+                                        <th>id documento</th>
+                                        <th>id editorial</th>
                                         <th>nombre</th>
                                         <th>descripcion</th>
                                         <th>tipo documento</th>
                                         <th>fecha </th>
                                         <th>adicional</th>
-                                        
-
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -202,24 +200,33 @@ $sql = "SELECT * from documento where id_usuario = '$id'";
                                         
                                         echo "<tr>
                                                 
+                                                <td>".$row['id_documento']."</td>
                                                 <td>".$row['id_editorial']."</td>
                                                 <td>".$row['nombre']."</td>
                                                 <td>".$row['descripcion']."</td>
                                                 <td>".$row['id_tipo_documento']."</td>
                                                 <td>".$row['fecha_publicacion']."</td>
                                                 <td>".$row['adicional']."</td>
-                                               
+                                                <td> <a href='EditarDocumento.php?id=".$row['id_documento']."'>Editar</a> </td>
+
                                             </tr>";
+
                                     }
                                     ?>
+                                    
                                     </tbody>
                                 </table>
                             </div>
+                           
+                        </form>
+                            
+                        </button>
                         </div>
+                        
                     </div>
 
 
-
+            
 
 
             </section>

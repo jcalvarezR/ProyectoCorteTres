@@ -2,6 +2,8 @@
 require 'includes/conexion.php';
 session_start();
 
+
+
 $varsesion = $_SESSION['email'];
 
 
@@ -11,19 +13,28 @@ $varsesion = $_SESSION['email'];
 } 
 
     
-    $sql = "SELECT * from usuario where correo = '$varsesion'";
+/*     $sql = "SELECT * from usuario where correo = '$varsesion'";
     $result = $conexion->query($sql);
     
     $row = $result->fetch_assoc();
     
-    $_SESSION['id'] = $row['id_usuario'];
     
-
+     */
+    $id = $_GET['id'];
+    $sql = "SELECT * from documento where id_documento = '$id'";
+    $result = $conexion->query($sql);
+    
+    $row = $result->fetch_assoc();
+    $_SESSION['id_documento'] = $row['id_documento'];
+    $_SESSION['id_editorial'] = $row['id_editorial'];
+    $_SESSION['nombre_doc'] = $row['nombre'];
+    $_SESSION['descripcion'] = $row['descripcion'];
+    $_SESSION['fecha_publicacion'] = $row['fecha_publicacion'];
 ?>
 
 
 
-<h1> <?php echo $_SESSION['id'] ?> </h1>
+
 
 <!doctype html>
 <html lang="en">
@@ -55,49 +66,43 @@ $varsesion = $_SESSION['email'];
         <div class="row no-gutters bg-dark">
             <div class="col-xl-5 col-lg-12 register-bg">
 
-
+            
 
             </div>
             <div class="col-xl-7 col-lg-12 d-flex">
                 <div class="container align-self-center p-6">
                     <h1 class="font-weight-bold mb-3">Edite su documento</h1>
-
+                    <h1> <?php echo 'Su Id es: '. $id ?> </h1>
                     <p class="text-muted mb-5">Diligenciar correctamente el documento.</p>
 
-                    <form action="includes/editarD.php" method="#"
+                    <form action="includes/editarD.php" method="POST"
                         style="border-collapse: separate; border-spacing: 10px 5px;">
 
                         <div class="form-row mb-2">
                             
 
                             <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Id_editorial<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold">Id_editorial</label>
                                 <input type="number" class="form-control" placeholder="Digite id de la editorial"
-                                    name="id_editorial" required>
+                                    name="id_editorial" id="id_editorial" value="<?php echo $_SESSION['id_editorial']?>">
                             </div>
 
-                         
-                          
-
-
-
                             <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Nombre<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" placeholder="Digite su nombre" name="nombre"
-                                    required>
+                                <label class="font-weight-bold">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Digite su nombre" name="nombre" id="nombre"
+                                      value="<?php echo $_SESSION['nombre_doc']?>">
                             </div>
 
 
                             <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Descripcion<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold">Descripcion</label>
                                 <input type="text" class="form-control" placeholder="Digite la descripcion"
-                                    name="descripcion" required>
+                                    name="descripcion" id="descripcion"  value="<?php echo $_SESSION['descripcion']?>">
                             </div>
                             <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Fecha_publicacion<span
-                                        class="text-danger">*</span></label>
+                                <label class="font-weight-bold">Fecha_publicacion</label>
                                 <input type="date" class="form-control" placeholder="Digite la fecha de publiacacion"
-                                    name="fecha_publicacion" required>
+                                    name="fecha_publicacion" id="fecha_publicacion"  value="<?php echo $_SESSION['fecha_publicacion']?>">
                             </div>
 
 
@@ -109,8 +114,8 @@ $varsesion = $_SESSION['email'];
 
                                 <br>
                                 <br> <br> <br>
-                                <center><button type="submit" class="btn btn-primary">Guardar</button>
-                                    <a href='#' <button type='submit' name='volver'
+                                <center><button class="btn btn-primary">Guardar</button>
+                                    <a href='DashboardUsuario.php' <button  name='volver'
                                         class='login-form-btn'>VOLVER</a></button></center>
                     </form>
 
